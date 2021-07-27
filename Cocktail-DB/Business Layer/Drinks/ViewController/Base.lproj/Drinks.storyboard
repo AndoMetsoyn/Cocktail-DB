@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yuB-ZW-wL0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Drinks View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DrinksViewController" customModule="Cocktail_DB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rSX-Pp-P1v">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <inset key="separatorInset" minX="32" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rSX-Pp-P1v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CfU-tI-CYo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rSX-Pp-P1v" secondAttribute="trailing" id="IVD-xl-Id3"/>
+                            <constraint firstItem="rSX-Pp-P1v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XMR-Zs-G6C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rSX-Pp-P1v" secondAttribute="bottom" id="xHg-g8-nTB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wSN-wm-sWS">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="oLz-N0-pDi">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="onFilter:" destination="BYZ-38-t0r" id="jI1-IT-hBb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="rSX-Pp-P1v" id="SF4-9P-ZeD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050.7246376811595" y="87.723214285714278"/>
+        </scene>
+        <!--Filter Drink View Controller-->
+        <scene sceneID="8Yk-uq-PdL">
+            <objects>
+                <viewController storyboardIdentifier="FilterDrinkViewController" id="rdd-qV-2gs" customClass="FilterDrinkViewController" customModule="Cocktail_DB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="buF-l3-BjE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JCS-mY-Tas">
+                                <rect key="frame" x="0.0" y="44" width="414" height="731"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0FX-sY-ugR">
+                                <rect key="frame" x="27" y="775" width="360" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Et5-JV-boC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Apply Filter">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onApplyFilter:" destination="rdd-qV-2gs" eventType="touchUpInside" id="PlF-sb-sus"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rft-Dz-MFR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Rft-Dz-MFR" firstAttribute="trailing" secondItem="0FX-sY-ugR" secondAttribute="trailing" constant="27" id="JZv-b4-Uew"/>
+                            <constraint firstItem="0FX-sY-ugR" firstAttribute="top" secondItem="JCS-mY-Tas" secondAttribute="bottom" id="TNj-09-2CG"/>
+                            <constraint firstItem="Rft-Dz-MFR" firstAttribute="trailing" secondItem="JCS-mY-Tas" secondAttribute="trailing" id="UII-zz-5ah"/>
+                            <constraint firstItem="JCS-mY-Tas" firstAttribute="leading" secondItem="Rft-Dz-MFR" secondAttribute="leading" id="jMk-8r-32u"/>
+                            <constraint firstItem="Rft-Dz-MFR" firstAttribute="bottom" secondItem="0FX-sY-ugR" secondAttribute="bottom" constant="27" id="mr6-QG-TF4"/>
+                            <constraint firstItem="0FX-sY-ugR" firstAttribute="leading" secondItem="Rft-Dz-MFR" secondAttribute="leading" constant="27" id="sAX-V6-fQA"/>
+                            <constraint firstItem="JCS-mY-Tas" firstAttribute="top" secondItem="Rft-Dz-MFR" secondAttribute="top" id="v8E-ch-eob"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="T5j-gR-7x3"/>
+                    <connections>
+                        <outlet property="applyFilter" destination="0FX-sY-ugR" id="pVV-Gf-7M6"/>
+                        <outlet property="tableView" destination="JCS-mY-Tas" id="NNp-Df-Nig"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aFc-OC-NpH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1824" y="107"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sLI-2p-Ko2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yuB-ZW-wL0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FG3-iq-IW8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yh5-L4-pfl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z6I-Lh-K0R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="87.723214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
